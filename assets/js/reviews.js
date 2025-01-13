@@ -1,3 +1,5 @@
+const API_URL = 'http://localhost:5000';
+
 // Handle star rating selection
 const stars = document.querySelectorAll('.star-rating i');
 let selectedRating = 0;
@@ -9,11 +11,24 @@ stars.forEach(star => {
   });
 });
 
+function updateStars(rating) {
+  stars.forEach(star => {
+    const starRating = parseInt(star.dataset.rating);
+    star.classList.toggle('fas', starRating <= rating);
+    star.classList.toggle('far', starRating > rating);
+  });
+}
+
+// Show/Hide review form
+document.getElementById('writeReviewBtn').addEventListener('click', () => {
+  document.getElementById('reviewForm').style.display = 'block';
+});
+
 // Submit review
 document.getElementById('submitReview').addEventListener('click', async () => {
   const reviewText = document.querySelector('textarea').value;
   
-  const response = await fetch('/api/reviews', {
+  const response = await fetch(`${API_URL}/api/reviews`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -21,7 +36,7 @@ document.getElementById('submitReview').addEventListener('click', async () => {
     body: JSON.stringify({
       rating: selectedRating,
       review: reviewText,
-      name: 'Anonymous' // You can add user authentication later
+      name: document.getElementById('reviewerName').value
     })
   });
   
@@ -31,9 +46,9 @@ document.getElementById('submitReview').addEventListener('click', async () => {
   }
 });
 
-// Load reviews
+// Load and display reviews
 async function loadReviews() {
-  const response = await fetch('/api/reviews');
+  const response = await fetch(`${API_URL}/api/reviews`);
   const reviews = await response.json();
   
   const reviewsList = document.querySelector('.reviews-list');
@@ -59,6 +74,14 @@ async function loadReviews() {
       </div>
     </div>
   `).join('');
+}
+
+function generateStars(rating) {
+  return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+}
+
+function formatDate(date) {
+  return new Date(date).toLocaleDateString();
 }
 
 // Load reviews on page load
