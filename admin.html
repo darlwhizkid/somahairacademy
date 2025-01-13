@@ -6,8 +6,16 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2>Review Management</h2>
-        <div id="adminReviews"></div>
+        <div class="login-section" id="loginForm">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div class="reviews-section" id="reviewsSection" style="display: none">
+            <h2>Review Management</h2>
+            <div id="adminReviews"></div>
+        </div>
     </div>
     <script src="assets/js/admin.js"></script>
 </body>
