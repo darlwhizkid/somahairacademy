@@ -32,43 +32,6 @@ h4 {
   text-align: center;
 }
 
-.container {
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.container svg {
-  --spin-duration: 2000ms;
-  --infinity-duration: 2000ms;
-  --hsl-base-h: 5deg;
-  --hsl-base-s: 70%;
-  --hsl-base-l: 50%;
-  animation: spin81213 var(--spin-duration) linear infinite;
-}
-
-.eight {
-  --eight-length-px: 60.84563446044922px;
-  --offset: calc(var(--order) * 5px);
-  animation: infinity8123 var(--infinity-duration) linear infinite;
-  d: path("m5 5a1 1 0 0110 0c0 4-10 6-10 10a1 1 0 0010 0c0-4-10-6-10-10");
-  fill: none;
-  stroke: hsl(
-    calc(var(--hsl-base-h) * var(--order)) var(--hsl-base-s) var(--hsl-base-l)
-  );
-  stroke-dasharray: 6px calc(var(--eight-length-px) - 6px);
-  stroke-linecap: round;
-  stroke-width: calc(1 - var(--order) / 10);
-}
-
-@keyframes infinity8123 {
-  0% {
-    stroke-dashoffset: calc(var(--eight-length-px) + var(--offset));
-  }
-  100% {
-    stroke-dashoffset: var(--offset);
-  }
-}
-
 @keyframes spin81213 {
   0% {
     transform: rotate(0);
@@ -229,7 +192,7 @@ h4 {
 .shape-1 {
   width: 300px;
   height: 300px;
-  background: rgba(255, 71, 87, 0.1);
+  background: rgba(73, 53, 253, 0.1);
   top: -150px;
   left: -150px;
   animation: float 8s infinite;
