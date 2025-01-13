@@ -27,3 +27,17 @@ app.get('/api/reviews', async (req, res) => {
   const reviews = await Review.find().sort('-date');
   res.json(reviews);
 });
+
+// Admin response endpoint
+app.post('/api/reviews/:id/respond', async (req, res) => {
+    const { id } = req.params;
+    const { adminResponse } = req.body;
+    
+    const review = await Review.findByIdAndUpdate(
+        id,
+        { adminResponse },
+        { new: true }
+    );
+    
+    res.json(review);
+});
