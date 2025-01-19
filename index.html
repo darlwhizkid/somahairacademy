@@ -20,20 +20,15 @@
   <body>
     <!-- Preloader -->
     <div id="preloader">
-      <div class="loader-container">
-        <img
-          src="assets/img/logo.png"
-          alt="Soma Hairs Logo"
-          class="loader-logo"
-        />
-        <div class="loading-text">
-          <span>S</span>
-          <span>O</span>
-          <span>M</span>
-          <span>A</span>
-        </div>
-      </div>
-    </div>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+  </section>
+</div>
     <!-- Preloader ends -->
 
     <!-- Navbar begins -->
@@ -106,98 +101,107 @@
       </div>
     </div>
     <!-- Announcement bar ends -->
-
-    <!-- About Us Starts -->
-    <section id="about" class="about-section py-5">
-      <!-- Floating Shape Decorations -->
-      <div class="shape-1"></div>
-      <div class="shape-2"></div>
-
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Left Column with Image Gallery -->
-          <div class="col-md-6">
-            <div class="about-image-grid">
-              <div class="grid-item main-image">
-                <img
-                  src="https://placehold.co/400x500"
-                  alt="Soma Academy Main"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="grid-item">
-                <img
-                  src="https://placehold.co/200x200"
-                  alt="Training Session"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="grid-item">
-                <div class="stats-card">
-                  <span class="number counter">500+</span>
-                  <span class="label">Graduates</span>
-                </div>
-              </div>
-              <div class="grid-item">
-                <img
-                  src="https://placehold.co/200x200"
-                  alt="Student Success"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column with Content -->
-          <div class="col-md-6">
-            <div class="about-content">
-              <span class="subtitle">About Soma Hair Academy</span>
-              <h2 class="title">Transforming Passion into Profession</h2>
-
-              <div class="feature-boxes">
-                <div class="feature-box">
-                  <i class="fas fa-award"></i>
-                  <h4>Expert Training</h4>
-                  <p>
-                    Learn from an industry professional with years of experience
-                  </p>
-                </div>
-                <div class="feature-box">
-                  <i class="fas fa-user-graduate"></i>
-                  <h4>Career Support</h4>
-                  <p>Lifetime mentorship and business guidance</p>
-                </div>
-              </div>
-
-              <p class="description">
-                Founded in 2020, Soma Hair Academy has grown to become Nigeria's
-                premier hair styling institution. We blend traditional
-                techniques with modern innovations to create well-rounded hair
-                professionals.
-              </p>
-
-              <div class="achievement-row">
-                <div class="achievement">
-                  <span class="counter">98%</span>
-                  <p>Success Rate</p>
-                </div>
-                <div class="achievement">
-                  <span class="counter">50+</span>
-                  <p>Expert Trainers</p>
-                </div>
-                <div class="achievement">
-                  <span class="counter">1000+</span>
-                  <p>Online Students</p>
+      <!-- About Us begins -->
+      <section id="about" class="about-section">
+        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="about-content-wrapper">
+                <img src="https://placehold.co/1920x800" class="d-block w-100" alt="Soma Hair Academy">
+                <div class="carousel-overlay">
+                  <div class="container">
+                    <div class="about-content text-center">
+                      <h2>Welcome to Soma Hair Academy</h2>
+                      <p class="lead">Your journey to becoming a professional hairstylist starts here</p>
+                      <div class="features-grid">
+                        <div class="feature-item">
+                          <i class="fas fa-graduation-cap"></i>
+                          <span class="feature-text">Professional Training</span>
+                        </div>
+                        <div class="feature-item">
+                          <i class="fas fa-certificate"></i>
+                          <span class="feature-text">Certified Courses</span>
+                        </div>
+                        <div class="feature-item">
+                          <i class="fas fa-users"></i>
+                          <span class="feature-text">Expert Instructor</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="about-content-wrapper">
+                <img src="https://placehold.co/1920x800" class="d-block w-100" alt="Our Facilities">
+                <div class="carousel-overlay">
+                  <div class="container">
+                    <div class="about-content text-center">
+                      <h2>State-of-the-Art Facilities</h2>
+                      <p class="lead">Learn in a modern and well-equipped environment</p>
+                      <div class="features-grid">
+                        <div class="feature-item">
+                          <i class="fas fa-tools"></i>
+                          <span class="feature-text">Modern Equipment</span>
+                        </div>
+                        <div class="feature-item">
+                          <i class="fas fa-chair"></i>
+                          <span class="feature-text">One-on-One Coaching</span>
+                        </div>
+                        <div class="feature-item">
+                          <i class="fas fa-laptop"></i>
+                          <span class="feature-text">Online Classes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="about-content-wrapper">
+                <img src="https://placehold.co/1920x800" class="d-block w-100" alt="Career Opportunities">
+                <div class="carousel-overlay">
+                  <div class="container">
+                    <div class="about-content text-center">
+                      <h2>Launch Your Career</h2>
+                      <p class="lead">Open doors to endless opportunities in the beauty industry</p>
+                      <div class="features-grid">
+                        <div class="feature-item">
+                          <i class="fas fa-briefcase"></i>
+                          <span class="feature-text">Industry Connections</span>
+                        </div>
+                        <div class="feature-item">
+                          <i class="fas fa-handshake"></i>
+                          <span class="feature-text">Business Training</span>
+                        </div>
+                        <div class="feature-item">
+                          <i class="fas fa-chart-line"></i>
+                          <span class="feature-text">Career Growth</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+    
+          <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
-      </div>
-    </section>
-    <!-- About us Ends -->
-
-    <!-- Online Courses Begins -->
+      </section>
+      <!-- About Us ends -->    <!-- Online Courses Begins -->
     <section id="onlineCourses" class="section py-5">
       <div class="container">
         <h2 class="text-center mb-5">Online Courses</h2>
@@ -215,18 +219,11 @@
               </div>
               <div class="course-content p-4">
                 <h4>Wig Revamp and Styling</h4>
-                <div class="rating mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>(4.8)</span>
-                </div>
+                
                 <p>
                   This is an online course on professional wig revamp and
                   styling. It is a beginner friendly class and for advanced
-                  learners ready to upgrade their skills and techniques. In this
+                  learners ready to upgrade their skills and techniques.<br> In this
                   class, you will learn different styling techniques including
                   the water curly styling technique as stated on the flyer. You
                   have ONE YEAR access to the course. You will also get access
@@ -257,18 +254,11 @@
               </div>
               <div class="course-content p-4">
                 <h4>Lace Repair and Refill</h4>
-                <div class="rating mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>(5.0)</span>
-                </div>
+               
                 <p>
                   This is an online course on lace repair and refill. It is a
                   beginner friendly class and for advanced learners ready to
-                  upgrade their skills and techniques. In this class, you will
+                  upgrade their skills and techniques.<br> In this class, you will
                   learn how to repair and torn lace,how to refill any bald lace
                   and how to do hairline replacement effortlessly as stated on
                   the flyer. You have ONE YEAR access to the course. You will
@@ -299,14 +289,7 @@
               </div>
               <div class="course-content p-4">
                 <h4>Style Water Curly Hairs</h4>
-                <div class="rating mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>(4.9)</span>
-                </div>
+                
                 <p>
                   This is an online course that teaches you how to style
                   different textures of water curly hair and the right products
@@ -341,19 +324,12 @@
               </div>
               <div class="course-content p-4">
                 <h4>Curl like a Pro</h4>
-                <div class="rating mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>(5.0)</span>
-                </div>
+                
                 <p>
                   This is an online course that teaches you how to curl and comb
                   out like a professional. It is a beginner friendly class and
                   for advanced learners ready to upgrade their skills and
-                  techniques. You will also learn different curl directions,
+                  techniques.<br> You will also learn different curl directions,
                   thing you should do and shouldn’t do while curling, how to do
                   the right finishing touches and how to get your frontal to be
                   flat and neat You have 9 months access to the course.
@@ -382,14 +358,7 @@
               </div>
               <div class="course-content p-4">
                 <h4>THE BUSINESS STRUCTURE COURSE</h4>
-                <div class="rating mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>(4.9)</span>
-                </div>
+                
                 <p>
                   This is a guide and a detailed online
                   course (audio/video) specifically made for hair vendors and
