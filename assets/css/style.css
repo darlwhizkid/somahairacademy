@@ -158,7 +158,7 @@ h4 {
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border: 2px solid gold;
+  border: 4px solid #ddc0b4;
 }
 
 .logo-circle img {
@@ -291,27 +291,6 @@ h4 {
 /* Online classes ends */
 
 /* Physical Classes begins */
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.play-button:hover {
-  background: #fff;
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
 .feature-list li {
   margin-bottom: 15px;
   list-style: none;
@@ -487,3 +466,39 @@ h4 {
 
 /* Footer ends */
 
+
+.course-meta .btn-outline-primary {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.modal-body li {
+    margin-bottom: 10px;
+}
+
+.policy-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.policy-btn:hover {
+    background-color: #003d82;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

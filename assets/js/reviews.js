@@ -21,6 +21,7 @@ function updateStars(rating) {
 
 // Show/Hide review form
 document.getElementById('writeReviewBtn').addEventListener('click', () => {
+  console.log('Button clicked');
   document.getElementById('reviewForm').style.display = 'block';
 });
 
