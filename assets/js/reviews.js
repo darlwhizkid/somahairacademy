@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = "https://soma-backend-2syz.onrender.com";
 
 // Handle star rating selection
 const stars = document.querySelectorAll('.star-rating i');
