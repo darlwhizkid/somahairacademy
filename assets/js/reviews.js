@@ -20,10 +20,13 @@ function updateStars(rating) {
 }
 
 // Show/Hide review form
-document.getElementById('writeReviewBtn').addEventListener('click', () => {
-  console.log('Button clicked');
-  document.getElementById('reviewForm').style.display = 'block';
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('writeReviewBtn').addEventListener('click', () => {
+    console.log('Button clicked');
+    document.getElementById('reviewForm').style.display = 'block';
+  });
 });
+
 
 // Submit review
 document.getElementById('submitReview').addEventListener('click', async () => {
