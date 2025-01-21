@@ -19,36 +19,38 @@ function updateStars(rating) {
   });
 }
 
-// Show/Hide review form
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('writeReviewBtn').addEventListener('click', () => {
-    console.log('Button clicked');
-    document.getElementById('reviewForm').style.display = 'block';
+document.addEventListener("DOMContentLoaded", () => {
+  // Show/Hide review form
+  document.getElementById("writeReviewBtn").addEventListener("click", () => {
+    console.log("Button clicked");
+    document.getElementById("reviewForm").style.display = "block";
   });
+
+  // Submit review
+  document
+    .getElementById("submitReview")
+    .addEventListener("click", async () => {
+      const reviewText = document.querySelector("textarea").value;
+
+      const response = await fetch(`${API_URL}/api/reviews`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          rating: selectedRating,
+          review: reviewText,
+          name: document.getElementById("reviewerName").value,
+        }),
+      });
+
+      if (response.ok) {
+        loadReviews();
+        document.getElementById("reviewForm").style.display = "none";
+      }
+    });
 });
 
-
-// Submit review
-document.getElementById('submitReview').addEventListener('click', async () => {
-  const reviewText = document.querySelector('textarea').value;
-  
-  const response = await fetch(`${API_URL}/api/reviews`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      rating: selectedRating,
-      review: reviewText,
-      name: document.getElementById('reviewerName').value
-    })
-  });
-  
-  if (response.ok) {
-    loadReviews();
-    document.getElementById('reviewForm').style.display = 'none';
-  }
-});
 
 // Load and display reviews
 async function loadReviews() {
