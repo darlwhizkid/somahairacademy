@@ -78,7 +78,7 @@ function createReviewElement(review) {
                         <p class="review-text">${review.review}</p>
                     </div>
                     <small class="text-muted">${formatDate(
-                      review.createdAt
+                      review.date
                     )}</small>
                 </div>
                 <div class="review-actions mt-3">
