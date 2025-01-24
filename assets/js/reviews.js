@@ -77,9 +77,11 @@ function createReviewElement(review) {
                         <h5>${review.name}</h5>
                         <p class="review-text">${review.review}</p>
                     </div>
-                    <small class="text-muted">${formatDate(review.date)}</small>
+                    <small class="text-muted">${formatDate(
+                      review.createdAt
+                    )}</small>
                 </div>
-                <div class="review-actions">
+                <div class="review-actions mt-3">
                     <button class="btn btn-sm btn-primary edit-review">Edit</button>
                     <button class="btn btn-sm btn-danger delete-review">
                         <i class="fas fa-trash"></i> Delete
@@ -91,14 +93,6 @@ function createReviewElement(review) {
                         <button class="btn btn-sm btn-success save-edit">Save</button>
                         <button class="btn btn-sm btn-danger cancel-edit">Cancel</button>
                     </div>
-                </div>
-                <div class="admin-response-section">
-                    <textarea class="form-control admin-response-text"></textarea>
-                    <button class="btn btn-primary submit-admin-response" data-review-id="${
-                      review._id
-                    }">
-                        Submit Response
-                    </button>
                 </div>
                 ${
                   review.adminResponse
@@ -114,6 +108,7 @@ function createReviewElement(review) {
         </div>
     `;
 }
+
 
 
 // Function to handle edit click
